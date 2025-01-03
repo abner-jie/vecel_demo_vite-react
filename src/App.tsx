@@ -10,7 +10,8 @@ function App() {
     }
 
     function clickDownload() {
-        postEvent('web_app_request_file_download', {
+        // @ts-ignore
+        postEvent('web_app_request_file', {
             url: 'https://static.yanan.uxuy.bipal.space/uxuy-activity/twitter/tes888998.png',
             file_name: 'test.png',
         })
