@@ -7,6 +7,7 @@ function App() {
         init()
         on('emoji_status_set', (data) => {
             console.log('emoji_status_set: ', data)
+            alert('设置自定义表情成功')
         })
     }, [])
 
