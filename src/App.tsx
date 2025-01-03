@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus, init, isSettingEmojiStatus, on } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus, init, on } from '@telegram-apps/sdk'
 
 function App() {
     useEffect(() => {
@@ -17,8 +17,7 @@ function App() {
         //     custom_emoji_id: '6321305803663872502',
         //     duration: 500,
         // })
-        const statusSet = await setEmojiStatus(custom_emoji_id, 500)
-        console.log('statusSet: ', statusSet, isSettingEmojiStatus())
+        await setEmojiStatus(custom_emoji_id, 500)
     }
 
     function clickDownload() {
@@ -33,7 +32,6 @@ function App() {
         <div>
             <div>
                 <button onClick={onClickSetEmoji}>设置表情:</button>
-                isSettingEmojiStatus: {isSettingEmojiStatus()}
             </div>
             <button onClick={clickDownload}>下载图片</button>
         </div>
