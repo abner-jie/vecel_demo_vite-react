@@ -1,8 +1,12 @@
 import { useEffect } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus, init } from '@telegram-apps/sdk'
 
 function App() {
+    useEffect(() => {
+        init()
+    }, [])
+
     async function onClickSetEmoji() {
         const custom_emoji_id = '6321305803663872502'
         // postEvent('web_app_set_emoji_status', {
@@ -20,7 +24,6 @@ function App() {
             file_name: 'test.png',
         })
     }
-    useEffect(() => {}, [])
 
     return (
         <div>
