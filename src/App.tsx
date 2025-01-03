@@ -1,10 +1,13 @@
 import { useEffect } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus, init, isSettingEmojiStatus } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus, init, isSettingEmojiStatus, on } from '@telegram-apps/sdk'
 
 function App() {
     useEffect(() => {
         init()
+        on('emoji_status_set', (data) => {
+            console.log('emoji_status_set: ', data)
+        })
     }, [])
 
     async function onClickSetEmoji() {
