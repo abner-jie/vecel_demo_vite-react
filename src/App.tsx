@@ -1,12 +1,16 @@
+import { useEffect } from 'react'
 import './App.css'
-import { postEvent } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus } from '@telegram-apps/sdk'
 
 function App() {
-    function onClickSetEmoji() {
-        postEvent('web_app_set_emoji_status', {
-            custom_emoji_id: '6321305803663872502',
-            duration: 500,
-        })
+    async function onClickSetEmoji() {
+        const custom_emoji_id = '6321305803663872502'
+        // postEvent('web_app_set_emoji_status', {
+        //     custom_emoji_id: '6321305803663872502',
+        //     duration: 500,
+        // })
+        const statusSet = await setEmojiStatus(custom_emoji_id, 500)
+        console.log('statusSet: ', statusSet)
     }
 
     function clickDownload() {
@@ -16,6 +20,7 @@ function App() {
             file_name: 'test.png',
         })
     }
+    useEffect(() => {}, [])
 
     return (
         <div>
