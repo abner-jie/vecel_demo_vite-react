@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus, init, on, request } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus, init, on } from '@telegram-apps/sdk'
 
 function App() {
     useEffect(() => {
