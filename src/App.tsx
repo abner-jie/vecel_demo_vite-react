@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus, init, on } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus, init, on, request } from '@telegram-apps/sdk'
 
 function App() {
     useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
 
     function clickDownload() {
         // @ts-ignore
-        postEvent('web_app_request_file', {
+        postEvent('web_app_request_file_download', {
             url: 'https://static.yanan.uxuy.bipal.space/uxuy-activity/twitter/tes888998.png',
             file_name: 'test.png',
         })
