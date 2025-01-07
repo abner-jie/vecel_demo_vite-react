@@ -16,13 +16,17 @@ function App() {
     }, [])
 
     async function onClickSetEmoji() {
-        // const custom_emoji_id = '6321305803663872502'
-        const custom_emoji_id = '63213058036632502aa'
-        // postEvent('web_app_set_emoji_status', {
-        //     custom_emoji_id: '6321305803663872502',
-        //     duration: 500,
-        // })
-        await setEmojiStatus(custom_emoji_id, 500)
+        try {
+            // const custom_emoji_id = '6321305803663872502'
+            const custom_emoji_id = '63213058036632502aa'
+            // postEvent('web_app_set_emoji_status', {
+            //     custom_emoji_id: '6321305803663872502',
+            //     duration: 500,
+            // })
+            await setEmojiStatus(custom_emoji_id, 500)
+        } catch (e) {
+            console.error('catch error: ', e)
+        }
     }
 
     async function onClickRequestEmojiStatusAccess() {
