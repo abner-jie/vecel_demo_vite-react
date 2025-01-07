@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus, init, on } from '@telegram-apps/sdk'
+import { postEvent, setEmojiStatus, init, on, requestEmojiStatusAccess } from '@telegram-apps/sdk'
 
 function App() {
     useEffect(() => {
@@ -20,6 +20,10 @@ function App() {
         await setEmojiStatus(custom_emoji_id, 500)
     }
 
+    async function onClickRequestEmojiStatusAccess() {
+        await requestEmojiStatusAccess()
+    }
+
     function clickDownload() {
         // @ts-ignore
         postEvent('web_app_request_file_download', {
@@ -32,6 +36,7 @@ function App() {
         <div>
             <div>
                 <button onClick={onClickSetEmoji}>设置表情:</button>
+                <button onClick={onClickRequestEmojiStatusAccess}>授权给bot 设置表情:</button>
             </div>
             <button onClick={clickDownload}>下载图片</button>
         </div>
