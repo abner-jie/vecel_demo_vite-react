@@ -9,10 +9,15 @@ function App() {
             console.log('emoji_status_set: ', data)
             alert('设置自定义表情成功')
         })
+        on('emoji_status_failed', (data) => {
+            console.log('emoji_status_failed: ', data)
+            alert('设置自定义表情失败')
+        })
     }, [])
 
     async function onClickSetEmoji() {
-        const custom_emoji_id = '6321305803663872502'
+        // const custom_emoji_id = '6321305803663872502'
+        const custom_emoji_id = '63213058036632502aa'
         // postEvent('web_app_set_emoji_status', {
         //     custom_emoji_id: '6321305803663872502',
         //     duration: 500,
