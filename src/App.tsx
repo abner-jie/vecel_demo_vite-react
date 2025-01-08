@@ -35,7 +35,9 @@ function App() {
     }
 
     async function clickBootChannel() {
-        openTelegramLink('https://t.me/boost/UXUYcom')
+        // 'boost'
+        // openTelegramLink('https://t.me/boost/UXUYcom')
+        openTelegramLink('https://t.me/boost/franktestchannela')
     }
 
     function clickDownload() {
