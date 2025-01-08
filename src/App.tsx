@@ -22,7 +22,7 @@ function App() {
             // const custom_emoji_id = '6323281626058986706' // yaya
             // const custom_emoji_id = '63213058036632502aa'
             postEvent('web_app_set_emoji_status', {
-                custom_emoji_id: '6321305803663872502',
+                custom_emoji_id: emojiId,
                 duration: 500,
             })
             // await setEmojiStatus(emojiId, 500)
