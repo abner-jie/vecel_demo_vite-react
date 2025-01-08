@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { postEvent, setEmojiStatus, init, on, requestEmojiStatusAccess } from '@telegram-apps/sdk-react'
+import { postEvent, init, on, requestEmojiStatusAccess, request } from '@telegram-apps/sdk-react'
 
 function App() {
     const [emojiId, setEmojiId] = useState('6323281626058986706')
@@ -21,11 +21,12 @@ function App() {
             // const custom_emoji_id = '6321305803663872502'
             // const custom_emoji_id = '6323281626058986706' // yaya
             // const custom_emoji_id = '63213058036632502aa'
-            // postEvent('web_app_set_emoji_status', {
-            //     custom_emoji_id: '6321305803663872502',
-            //     duration: 500,
-            // })
-            await setEmojiStatus(emojiId, 500)
+            // @ts-ignore
+            request('web_app_set_emoji_status', {
+                custom_emoji_id: '6321305803663872502',
+                duration: 500,
+            })
+            // await setEmojiStatus(emojiId, 500)
         } catch (e) {
             console.error('catch error: ', e)
         }
