@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { postEvent, init, on, requestEmojiStatusAccess } from '@telegram-apps/sdk-react'
+import { postEvent, init, on, requestEmojiStatusAccess, openTelegramLink } from '@telegram-apps/sdk-react'
 
 function App() {
     const [emojiId, setEmojiId] = useState('6323281626058986706')
@@ -34,6 +34,10 @@ function App() {
         await requestEmojiStatusAccess()
     }
 
+    async function clickBootChannel() {
+        openTelegramLink('https://t.me/boost/UXUYcom')
+    }
+
     function clickDownload() {
         // @ts-ignore
         postEvent('web_app_request_file_download', {
@@ -49,6 +53,10 @@ function App() {
                 <button onClick={onClickSetEmoji}>设置表情: {emojiId}</button>
                 <button onClick={onClickRequestEmojiStatusAccess}>授权给bot 设置表情:</button>
             </div>
+            <p>
+                <button onClick={clickBootChannel}>boot channel</button>
+            </p>
+
             <button onClick={clickDownload}>下载图片</button>
         </div>
     )
