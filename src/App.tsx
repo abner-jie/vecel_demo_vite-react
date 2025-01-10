@@ -33,6 +33,9 @@ function App() {
     async function onClickRequestEmojiStatusAccess() {
         await requestEmojiStatusAccess()
     }
+    async function payStarsInvoice() {
+        openTelegramLink('https://t.me/$_0vCJE95CVQqAgAAGp4puGwv77A')
+    }
 
     async function clickBootChannel() {
         // 'boost'
@@ -54,6 +57,7 @@ function App() {
                 <input type="text" onInput={(e) => setEmojiId(e.currentTarget.value)} />
                 <button onClick={onClickSetEmoji}>设置表情: {emojiId}</button>
                 <button onClick={onClickRequestEmojiStatusAccess}>授权给bot 设置表情:</button>
+                <button onClick={payStarsInvoice}>支付stars</button>
             </div>
             <p>
                 <button onClick={clickBootChannel}>boot channel</button>
