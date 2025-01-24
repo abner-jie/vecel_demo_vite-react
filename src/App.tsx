@@ -50,6 +50,10 @@ function App() {
             file_name: 'test.png',
         })
     }
+    
+    function addEmojiPack() {
+        openTelegramLink('https://t.me/addemoji/UXUYemoji')
+    }
 
     return (
         <div>
@@ -64,6 +68,7 @@ function App() {
             </p>
 
             <button onClick={clickDownload}>下载图片</button>
+            <button onClick={addEmojiPack}>添加 emoji 表情包</button>
         </div>
     )
 }
