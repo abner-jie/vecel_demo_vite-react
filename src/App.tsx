@@ -56,15 +56,8 @@ function App() {
     }
     
     async function onShareStory() {
-        shareStory('https://t.me/frank_test_000001/s/9', {
-            text: `Join UXUY Wallet, get 100 UP for free🆓
-💰Stand a chance to win future airdrops
-
-UXUY Wallet is a Web3 multi-chain decentralized wallet backed by Binance investments. `,
-            widgetLink: {
-                url: 'https://t.me/frank_wallet_bot/app?startapp=A_5789061414_inviteEarn',
-                name: 'Example',
-            },
+        shareStory('https://t.me/frank_test_000001/s/11', {
+            text: `Join x'x'x`,
         });
     }
 
