@@ -56,7 +56,7 @@ function App() {
     }
     
     async function onShareStory() {
-        shareStory('https://t.me/frank_test_000001/s/8', {
+        shareStory('https://t.me/frank_test_000001/s/9', {
             text: `Join UXUY Wallet, get 100 UP for free🆓
 💰Stand a chance to win future airdrops
 
