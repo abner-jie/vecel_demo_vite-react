@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { postEvent, init, on, requestEmojiStatusAccess, openTelegramLink } from '@telegram-apps/sdk-react'
+import { postEvent, init, on, requestEmojiStatusAccess, openTelegramLink, shareStory } from '@telegram-apps/sdk-react'
 
 function App() {
     const [emojiId, setEmojiId] = useState('6323281626058986706')
@@ -54,6 +54,19 @@ function App() {
     function addEmojiPack() {
         openTelegramLink('https://t.me/addemoji/UXUYemoji')
     }
+    
+    async function onShareStory() {
+        shareStory('https://t.me/aaefaefaef/s/2', {
+            text: `Join UXUY Wallet, get 100 UP for free🆓
+💰Stand a chance to win future airdrops
+
+UXUY Wallet is a Web3 multi-chain decentralized wallet backed by Binance investments. `,
+            widgetLink: {
+                url: 'https://t.me/frank_wallet_bot/app?startapp=A_5789061414_inviteEarn',
+                name: 'Example',
+            },
+        });
+    }
 
     return (
         <div>
@@ -69,6 +82,7 @@ function App() {
 
             <button onClick={clickDownload}>下载图片</button>
             <button onClick={addEmojiPack}>添加 emoji 表情包</button>
+            <button onClick={onShareStory}>分享 </button>
         </div>
     )
 }
