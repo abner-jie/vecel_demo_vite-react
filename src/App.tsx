@@ -61,7 +61,7 @@ function App() {
         })
     }
     async function onRule() {
-        openTelegramLink('https://t.me/UXUYtest/11')
+        openTelegramLink('https://t.me/UXUYcom/170')
     }
 
     return (
