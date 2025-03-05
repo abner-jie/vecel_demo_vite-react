@@ -50,15 +50,18 @@ function App() {
             file_name: 'test.png',
         })
     }
-    
+
     function addEmojiPack() {
         openTelegramLink('https://t.me/addemoji/UXUYemoji')
     }
-    
+
     async function onShareStory() {
         shareStory('https://t.me/frank_test_000001/s/11', {
             text: `Join x'x'x`,
-        });
+        })
+    }
+    async function onRule() {
+        openTelegramLink('https://t.me/UXUYtest/11')
     }
 
     return (
@@ -76,6 +79,7 @@ function App() {
             <button onClick={clickDownload}>下载图片</button>
             <button onClick={addEmojiPack}>添加 emoji 表情包</button>
             <button onClick={onShareStory}>分享 </button>
+            <button onClick={onRule}>规则 </button>
         </div>
     )
 }
